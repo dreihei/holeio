@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.pnpm-store/
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs and test artifacts
+*.log
+coverage/
+stats.txt

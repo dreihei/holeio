@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#102433" />
+    <meta name="description" content="Sink City – ein farbenfrohes Canvas-Arcade-Spiel" />
+    <title>Sink City</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="game-canvas" aria-label="Sink City Spielfeld"></canvas>
+      <div id="render-error" role="alert" hidden></div>
+
+      <section id="hud" aria-label="Spielstatus">
+        <div class="brand"><span class="brand-dot"></span>SINK CITY</div>
+        <div class="stats">
+          <div><span>PUNKTE</span><strong id="score">0</strong></div>
+          <div><span>GRÖSSE</span><strong id="size">1.0×</strong></div>
+          <div class="timer"><span>ZEIT</span><strong id="time">2:00</strong></div>
+        </div>
+        <aside class="leaderboard" aria-label="Rangliste">
+          <h2>RANGLISTE</h2>
+          <ol id="leaderboard"></ol>
+        </aside>
+      </section>
+
+      <section id="start-screen" class="panel-wrap">
+        <div class="panel">
+          <p class="eyebrow">DIE STADT GEHÖRT DIR</p>
+          <h1>SINK <span>CITY</span></h1>
+          <p>Verschlinge die Stadt, wachse und überhole die Konkurrenz.</p>
+          <div class="controls"><kbd>WASD</kbd><kbd>↑ ↓ ← →</kbd><span>oder ziehen</span></div>
+          <button id="start-button" type="button">RUNDE STARTEN</button>
+          <small>Highscore: <strong id="highscore">0</strong></small>
+        </div>
+      </section>
+
+      <section id="result-screen" class="panel-wrap" hidden>
+        <div class="panel result-panel">
+          <p class="eyebrow">RUNDE BEENDET</p>
+          <h2 id="result-title">STADTLEGENDE</h2>
+          <div class="result-score"><span>PUNKTE</span><strong id="final-score">0</strong></div>
+          <p id="final-rank">Platz 1 von 5</p>
+          <button id="restart-button" type="button">NOCHMAL SPIELEN</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
